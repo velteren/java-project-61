@@ -9,7 +9,7 @@ public class Calc {
         Scanner scanner = new Scanner(System.in);
         System.out.println(TASK_MESSAGE);
         boolean isCorrect = true;
-        int tries = 3;
+        int tries = App.NUMBER_OF_TRIES;
         while (tries > 0 && isCorrect) {
             int firstOperand = (int) (Math.random() * 100);
             int secondOperand = (int) (Math.random() * 100);

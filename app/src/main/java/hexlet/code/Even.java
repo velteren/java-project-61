@@ -8,7 +8,7 @@ public class Even {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         boolean isCorrect = true;
-        int tries = 3;
+        int tries = App.NUMBER_OF_TRIES;
         while (tries > 0 && isCorrect) {
             int number = (int) (Math.random() * 100);
             System.out.println("Question: " + number);

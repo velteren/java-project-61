@@ -8,7 +8,7 @@ public class GCD {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Find the greatest common divisor of given numbers.");
         boolean isCorrect = true;
-        int tries = 3;
+        int tries = App.NUMBER_OF_TRIES;
         while (tries > 0 && isCorrect) {
             int firstOperand = (int) (Math.random() * 100);
             int secondOperand = (int) (Math.random() * 100);

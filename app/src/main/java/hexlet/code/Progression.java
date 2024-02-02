@@ -9,7 +9,7 @@ public class Progression {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What number is missing in the progression?");
         boolean isCorrect = true;
-        int tries = 3;
+        int tries = App.NUMBER_OF_TRIES;
         while (tries > 0 && isCorrect) {
             int emptyIndex = (int) (Math.floor(Math.random() * 9.9));
             int[] arr = new int[10];
