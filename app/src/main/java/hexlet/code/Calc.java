@@ -16,7 +16,9 @@ public class Calc {
             int tmpRandomNumber = (int) (Math.random() * 100);
             String operator = (tmpRandomNumber <= 33) ? "+" : (tmpRandomNumber >= 66) ? "*" : "-";
             System.out.println("Question: " + firstOperand + " " + operator + " " + secondOperand);
-            String correctAnswer = (operator.equals("+")) ? String.valueOf((firstOperand + secondOperand)) : (operator.equals("-")) ? String.valueOf((firstOperand - secondOperand)) : String.valueOf((firstOperand * secondOperand));
+            String correctAnswer = (operator.equals("+"))
+                    ? String.valueOf((firstOperand + secondOperand)) : (operator.equals("-"))
+                    ? String.valueOf((firstOperand - secondOperand)) : String.valueOf((firstOperand * secondOperand));
             System.out.print("Your answer: ");
             String userAnswer = scanner.next();
             isCorrect = correctAnswer.equals(userAnswer);
@@ -24,7 +26,8 @@ public class Calc {
                 System.out.println("Correct!");
             } else {
                 tries = 0;
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
+                System.out.println("'" + userAnswer
+                        + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
                 System.out.println("Let's try again, " + name + "!");
             }
             tries -= 1;

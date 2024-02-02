@@ -13,7 +13,7 @@ public class GCD {
             int firstOperand = (int) (Math.random() * 100);
             int secondOperand = (int) (Math.random() * 100);
             System.out.println("Question: " + firstOperand + " " + secondOperand);
-            String correctAnswer = String.valueOf(gcd(firstOperand,secondOperand));
+            String correctAnswer = String.valueOf(gcd(firstOperand, secondOperand));
             System.out.print("Your answer: ");
             String userAnswer = scanner.next();
             isCorrect = correctAnswer.equals(userAnswer);
@@ -21,7 +21,8 @@ public class GCD {
                 System.out.println("Correct!");
             } else {
                 tries = 0;
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
+                        + correctAnswer + "'.");
                 System.out.println("Let's try again, " + name + "!");
             }
             tries -= 1;
@@ -31,7 +32,9 @@ public class GCD {
         }
     }
     public static int gcd(int a, int b) {
-        if (b==0) return a;
-        return gcd(b,a%b);
+        if (b == 0)  {
+            return a;
+        }
+        return gcd(b, a % b);
     }
 }
