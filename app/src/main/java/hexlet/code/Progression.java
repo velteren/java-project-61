@@ -11,10 +11,10 @@ public class Progression {
         boolean isCorrect = true;
         int tries = App.NUMBER_OF_TRIES;
         while (tries > 0 && isCorrect) {
-            int emptyIndex = (int) (Math.floor(Math.random() * 9.9));
-            int[] arr = new int[10];
-            int progressionCoef = (int) (Math.ceil(Math.random() * 10));
-            arr[0] = (int) (Math.random() * 10);
+            int emptyIndex = (int) (Math.floor(Math.random() * App.TEN)); //was 9.9
+            int[] arr = new int[App.TEN];
+            int progressionCoef = (int) (Math.ceil(Math.random() * App.TEN));
+            arr[0] = (int) (Math.random() * App.TEN);
             for (int i = 1; i < arr.length; i++) {
                 arr[i] = arr[i - 1] + progressionCoef;
             }

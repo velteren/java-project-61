@@ -10,7 +10,7 @@ public class Even {
         boolean isCorrect = true;
         int tries = App.NUMBER_OF_TRIES;
         while (tries > 0 && isCorrect) {
-            int number = (int) (Math.random() * 100);
+            int number = (int) (Math.random() * App.HUNDRED);
             System.out.println("Question: " + number);
             String correctAnswer = (number % 2 == 0) ? "yes" : "no";
             System.out.print("Your answer: ");

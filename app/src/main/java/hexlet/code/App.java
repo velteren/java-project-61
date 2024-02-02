@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class App {
     public static final int NUMBER_OF_TRIES = 3;
+    public static final int TEN = 10;
+    public static final int HUNDRED = 100;
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");

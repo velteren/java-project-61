@@ -3,6 +3,8 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Calc {
+    private static final int BOTTOM_BORDER = 33;
+    private static final int TOP_BORDER = 66;
     public static final String TASK_MESSAGE = "What is the result of the expression?";
     public static void startGame() {
         String name = Cli.askName();
@@ -11,10 +13,10 @@ public class Calc {
         boolean isCorrect = true;
         int tries = App.NUMBER_OF_TRIES;
         while (tries > 0 && isCorrect) {
-            int firstOperand = (int) (Math.random() * 100);
-            int secondOperand = (int) (Math.random() * 100);
-            int tmpRandomNumber = (int) (Math.random() * 100);
-            String operator = (tmpRandomNumber <= 33) ? "+" : (tmpRandomNumber >= 66) ? "*" : "-";
+            int firstOperand = (int) (Math.random() * App.HUNDRED);
+            int secondOperand = (int) (Math.random() * App.HUNDRED);
+            int tmpRandomNumber = (int) (Math.random() * App.HUNDRED);
+            String operator = (tmpRandomNumber <= BOTTOM_BORDER) ? "+" : (TOP_BORDER >= 66) ? "*" : "-";
             System.out.println("Question: " + firstOperand + " " + operator + " " + secondOperand);
             String correctAnswer = (operator.equals("+"))
                     ? String.valueOf((firstOperand + secondOperand)) : (operator.equals("-"))

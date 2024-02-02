@@ -10,8 +10,8 @@ public class GCD {
         boolean isCorrect = true;
         int tries = App.NUMBER_OF_TRIES;
         while (tries > 0 && isCorrect) {
-            int firstOperand = (int) (Math.random() * 100);
-            int secondOperand = (int) (Math.random() * 100);
+            int firstOperand = (int) (Math.random() * App.HUNDRED);
+            int secondOperand = (int) (Math.random() * App.HUNDRED);
             System.out.println("Question: " + firstOperand + " " + secondOperand);
             String correctAnswer = String.valueOf(gcd(firstOperand, secondOperand));
             System.out.print("Your answer: ");

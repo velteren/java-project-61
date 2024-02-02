@@ -10,7 +10,7 @@ public class Prime {
         boolean isCorrect = true;
         int tries = App.NUMBER_OF_TRIES;
         while (tries > 0 && isCorrect) {
-            int firstOperand = (int) (Math.random() * 100);
+            int firstOperand = (int) (Math.random() * App.HUNDRED);
             System.out.println("Question: " + firstOperand);
             String correctAnswer = (isPrime(firstOperand)) ? "yes" : "no";
             System.out.print("Your answer: ");
