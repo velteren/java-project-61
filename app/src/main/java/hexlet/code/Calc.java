@@ -16,7 +16,7 @@ public class Calc {
             int firstOperand = (int) (Math.random() * App.HUNDRED);
             int secondOperand = (int) (Math.random() * App.HUNDRED);
             int tmpRandomNumber = (int) (Math.random() * App.HUNDRED);
-            String operator = (tmpRandomNumber <= BOTTOM_BORDER) ? "+" : (TOP_BORDER >= 66) ? "*" : "-";
+            String operator = (tmpRandomNumber <= BOTTOM_BORDER) ? "+" : (tmpRandomNumber >= TOP_BORDER) ? "*" : "-";
             System.out.println("Question: " + firstOperand + " " + operator + " " + secondOperand);
             String correctAnswer = (operator.equals("+"))
                     ? String.valueOf((firstOperand + secondOperand)) : (operator.equals("-"))
