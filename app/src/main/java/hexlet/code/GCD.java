@@ -2,17 +2,18 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Even {
+public class GCD {
     public static void startGame() {
         String name = Cli.askName();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        System.out.println("Find the greatest common divisor of given numbers.");
         boolean isCorrect = true;
         int tries = 3;
         while (tries > 0 && isCorrect) {
-            int number = (int) (Math.random() * 100);
-            System.out.println("Question: " + number);
-            String correctAnswer = (number % 2 == 0) ? "yes" : "no";
+            int firstOperand = (int) (Math.random() * 100);
+            int secondOperand = (int) (Math.random() * 100);
+            System.out.println("Question: " + firstOperand + " " + secondOperand);
+            String correctAnswer = String.valueOf(gcd(firstOperand,secondOperand));
             System.out.print("Your answer: ");
             String userAnswer = scanner.next();
             isCorrect = correctAnswer.equals(userAnswer);
@@ -28,5 +29,9 @@ public class Even {
         if (isCorrect) {
             System.out.println("Congratulations, " + name + "!");
         }
+    }
+    public static int gcd(int a, int b) {
+        if (b==0) return a;
+        return gcd(b,a%b);
     }
 }
